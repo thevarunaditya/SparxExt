@@ -6,7 +6,7 @@
 ![Version](https://img.shields.io/badge/version-1.3-blue?color=%234093cf)
 ![Discord](https://img.shields.io/badge/discord.gg-yw8cbdG7yG-blue?color=%235765F2)
 
-SparxMaths extension to **answer and solve questions**. To use it, buy a subscription from https://discord.gg/pSdX84dh2J. It includes themes, auto-bookworks, and of course, the solver! It is discreet and can give answers in under 7 seconds.
+SparxMaths extension to **answer and solve questions**. To use it, buy a subscription from https://discord.gg/pSdX84dh2J. It includes themes, auto-bookworks, and of course, the solver!
 
 <br/>
 
