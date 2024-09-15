@@ -1,0 +1,6 @@
+> HOW TO INSTALL
+1. Open your browser (which must support chrome extensions)
+2. Go to chrome://extensions or the page to manage extensions
+3. Make sure developer mode is turned on in the top right
+4. Click 'load unpacked' and navigate to the folder with this installation file, and the rest of the extension files.
+5. Done!

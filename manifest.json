@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "SparxAnswerer",
+  "description": "Answer your SparxMaths a million times easier",
+  "version": "1.3",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "https://sparxmaths.uk/*",
+    "https://www.sparxmaths.uk/*"
+  ],
+  "content_scripts": [
+      {
+        "matches": ["https://sparxmaths.uk/*", "https://www.sparxmaths.uk/*"],
+        "js": ["gac.js", "h2c.js"],
+        "css": ["style.css"]
+      }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png"],
+      "matches": ["https://sparxmaths.uk/*", "https://www.sparxmaths.uk/*"]
+    },
+    {
+      "resources": [
+        "h2c.js"
+      ],
+      "matches": ["https://sparxmaths.uk/*", "https://www.sparxmaths.uk/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "bck.js"
+  },
+  "icons": {
+      "48": "icon.png"
+    }
+}
