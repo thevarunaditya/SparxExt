@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "SparxAnswerer",
   "description": "Answer your SparxMaths a million times easier",
-  "version": "1.35",
+  "version": "1.4",
   "permissions": [
     "activeTab",
     "storage",
@@ -15,13 +15,20 @@
   ],
   "host_permissions": [
     "https://sparxmaths.uk/*",
-    "https://www.sparxmaths.uk/*"
+    "https://www.sparxmaths.uk/*",
+    "https://course-cdn-v2.app.senecalearning.com/*",
+    "https://app.senecalearning.com/*"
   ],
   "content_scripts": [
       {
         "matches": ["https://sparxmaths.uk/*", "https://www.sparxmaths.uk/*"],
         "js": ["gac.js", "h2c.js"],
         "css": ["style.css"]
+      },
+      {
+        "matches": ["https://course-cdn-v2.app.senecalearning.com/*", "https://app.senecalearning.com/*"],
+        "js": ["sen_cnt.js"],
+        "css": ["sen_style.css"]
       }
   ],
   "web_accessible_resources": [

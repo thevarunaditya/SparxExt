@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+#courseDataButton {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    border: 1px solid #eeeeee15;
+    color: white;
+    cursor: pointer;
+
+    background-color: #eeeeee15;
+    backdrop-filter: blur(3px);
+    border-radius: 1000px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    transition: 0.2s;
+}
+
+#courseDataButton:hover {
+    background-color: #eeeeee2d;
+    scale: 1.1;
+}
+
+#courseDataPopup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 450px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    z-index: 1000;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    border-radius: 8px;
+}
+
+#dragHandle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f7f9;
+    flex-direction: row;
+    border-bottom: 1px solid #e4e6e7;
+    border-radius: 8px 8px 0px 0px;
+    padding: 2px 5px;
+}
+
+#dragHandle span {
+    font-size: 13px;
+    margin-right: 10px;
+    padding: 0.5px 0;
+    opacity: 0.4;
+}
+
+#dragHandle svg {
+    margin-left: 10px;
+    opacity: 0.4;
+}
+
+.contentContainer {
+    font-family: 'Inter', sans-serif;
+    padding: 12px;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 10px 8px;
+}
+
+.contentContainer > pre {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.closeButton {
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.betaIndicator {
+    font-size: 10px;
+    opacity: 0.3;
+    margin: 0;
+}
+
+.contentContainer::-webkit-scrollbar {
+    width: 7px;
+}
+  
+.contentContainer::-webkit-scrollbar-track {
+    background-color: #00000010; 
+    border-radius: 10px;
+}
+
+.contentContainer::-webkit-scrollbar-thumb {
+    background: #00000020; 
+    border-radius: 10px;
+}
+
+.contentContainer::-webkit-scrollbar-thumb:hover {
+    background: #00000030; 
+}
+
+#searchInput {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 2px 5px;
+    border: 1px solid #000000a4;
+    border-radius: 5px;
+    width: 90%;
+}
+
+#searchInput:focus {
+    outline: none;
+    border: 1px solid #000000;
+}
+
+.centerinput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+#modal-header {
+    width: 100%; /* Make sure the header spans the full width */
+    text-align: left;
+    border-bottom: 1px solid #e4e6e7;
+    background-color: #f4f7f9;
+    border-radius: 8px 8px 0 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+    color: #333;
+}
+
+.modal-intro {
+    color: #000;
+    font-size: 40px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#modal-content {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Center content vertically inside modal-content */
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    flex: 1; /* Ensure it takes available space */
+}
+
+.modalp {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.modalol {
+    width: 100%;
+}
+
+.modalh2 {
+    text-align: left;
+}
+
+.modalli {
+    all: unset;
+    display: list-item;
+    text-align: left;
+    list-style-type: disc;
+    padding: 0;
+    margin-left: 15px;
+}
+
+#modal-continue, #modal-next, #modal-close {
+    background-color: #428FF1;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#modal-next:hover, #modal-close:hover {
+    background-color: #2971cf;
+}
+
+
+#modal-continue {
+    background-color: #0c0d10;
+    margin-bottom: 5px;
+}
+
+#modal-continue:hover {
+    background-color: #0a0b0e;
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

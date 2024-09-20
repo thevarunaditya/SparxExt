@@ -159,6 +159,8 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 700px;
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -322,4 +324,37 @@ html, body {
 #bookworksButton:hover, #helpButton:hover {
     background-color: #00000033;
     scale: 1.1;
+}
+
+::-webkit-scrollbar {
+    width: 10px !important;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #c6c6c6 !important;
+    border-radius: 10px !important;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #00000020 !important;
+    border-radius: 10px !important;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00000030 !important;
+  }
+
+.notification {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #d7ecf8;
+    color: #1c5272;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out transform 0.3s ease-in-out;
 }
