@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "SparxAnswerer",
-  "description": "Answer your SparxMaths a million times easier",
-  "version": "1.4",
+  "name": "SparxExt",
+  "description": "Finish your SparxMaths a trillion times easier.",
+  "version": "1.5",
   "permissions": [
     "activeTab",
     "storage",
@@ -22,13 +22,13 @@
   "content_scripts": [
       {
         "matches": ["https://sparxmaths.uk/*", "https://www.sparxmaths.uk/*"],
-        "js": ["gac.js", "h2c.js"],
-        "css": ["style.css"]
+        "js": ["main/gac.js", "helpers/h2c.js", "helpers/math.js"],
+        "css": ["styles/style.css"]
       },
       {
         "matches": ["https://course-cdn-v2.app.senecalearning.com/*", "https://app.senecalearning.com/*"],
-        "js": ["sen_cnt.js"],
-        "css": ["sen_style.css"]
+        "js": ["main/sen_cnt.js"],
+        "css": ["styles/sen_style.css"]
       }
   ],
   "web_accessible_resources": [
@@ -38,13 +38,13 @@
     },
     {
       "resources": [
-        "h2c.js"
+        "helpers/h2c.js"
       ],
       "matches": ["https://sparxmaths.uk/*", "https://www.sparxmaths.uk/*"]
     }
   ],
   "background": {
-    "service_worker": "bck.js"
+    "service_worker": "main/bck.js"
   },
   "icons": {
       "48": "icon.png"

@@ -19,7 +19,7 @@ html, body {
     background-color: #0c57ae !important;
 }
 
-#answerCard {
+.answerCard {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -31,7 +31,7 @@ html, body {
     z-index: 1000;
 }
 
-#dragHandle {
+.dragHandle {
     cursor: move;
     border-bottom: 1px solid #e4e6e7;
     display: flex;
@@ -43,7 +43,7 @@ html, body {
     padding: 0 5px;
 }
 
-#closeAnswerCard {
+.closeAnswerCard {
     width: 20px;
     margin: 5px 0;
     stroke-width: 1.5;
@@ -51,15 +51,15 @@ html, body {
     opacity: 0.4;
 }
 
-#stopwatch {
+.stopwatch {
     font-size: 16px; margin-right: 10px; opacity: 0.4;
 }
 
-#answerContainer {
+.answerContainer {
     font-size: 16px; font-weight: bold; color: #333; margin: 0; margin-bottom: 10px;
 }
 
-#explanationText {
+.explanationText {
     font-size: 14px; color: #666; margin: 0;
 }
 
@@ -110,7 +110,6 @@ html, body {
     cursor: pointer;
     font-size: 13px;
     text-align: center;
-    margin: 0 auto;
     height: 35px;
     width: 38px;
     padding: 0;
@@ -132,9 +131,6 @@ html, body {
     cursor: pointer;
     font-size: 13px;
     text-align: center;
-    display: block;
-    margin: 0 auto;
-
     position: absolute;
     top: 4px;
     right: 4px;
@@ -143,14 +139,20 @@ html, body {
     border: 1px solid #DC3545;
 }
 
+#newPackageId,
 #newBookwork {
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
-    margin-bottom: 5px;
     padding: 10px;
     height: 35px;
     font-size: 17px;
+}
+
+#newPackageId { flex: 1; }
+#newBookwork { flex: 2; }
+
+.packageid {
+    color: #000;
 }
 
 #bookworksModal {
@@ -159,16 +161,14 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 700px;
-    max-height: 80vh; /* Limit the height to 80% of the viewport height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh;
+    overflow-y: auto;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 10000;
 }
-
-
 
 #background-overlay {
     position: fixed;
