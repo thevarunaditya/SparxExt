@@ -78,7 +78,7 @@ html, body {
     background: linear-gradient(126.42deg, var(--colours-primary-gradient-stop) 29.08%, var(--colours-primary-gradient-start) 96.52%) !important;
 }
 
-#bookworksButton, #helpButton {
+#bookworksButton, #helpButton, #developmentButton {
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -100,7 +100,11 @@ html, body {
     bottom: 65px;
 }
 
-#bookworksButton:disabled, #helpButton:disabled {
+#developmentButton {
+    bottom: 120px;
+}
+
+#bookworksButton:disabled, #helpButton:disabled, #developmentButton:disabled {
     background-color: #d9d9d905;
     cursor: not-allowed;
 }
@@ -316,12 +320,12 @@ html, body {
     margin: 0 auto;
 }
 
-#bookworksButton, #helpButton {
+#bookworksButton, #helpButton, #developmentButton {
     background-color: #0000001c;
     color: #000000;
 }
 
-#bookworksButton:hover, #helpButton:hover {
+#bookworksButton:hover, #helpButton:hover, #developmentButton:hover {
     background-color: #00000033;
     scale: 1.1;
 }
@@ -357,4 +361,69 @@ html, body {
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s ease-in-out transform 0.3s ease-in-out;
+}
+
+._BottomBar_1wgpl_1>div {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+._SourceButton {
+    position: absolute;
+    left: 0;
+    margin-bottom: 5px;
+    width: 100px;
+}
+
+#answerButton {
+    position: relative;
+}
+
+#answerButton:hover ._SourceButton {
+    display: block;
+}
+
+._ButtonBase_nt2r3_1._ButtonMd_nt2r3_35._ButtonBlue_nt2r3_76._ButtonOutlined_nt2r3_129:disabled {
+    border-color: #808386 !important;
+    color: #808386 !important
+}
+
+._ButtonBase_nt2r3_1._ButtonMd_nt2r3_35._ButtonBlue_nt2r3_76._ButtonOutlined_nt2r3_129:disabled:hover {
+    background: #80838644 !important;
+}
+
+#fixBookworks {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    margin-top: 5px;
+    border-radius: 3.5px;
+    box-shadow: #0002 3px 3px 0;
+    transition: 0.2s ease;
+}
+
+#fixBookworks:hover {
+    background-color: #0001;
+    box-shadow: #0002 2px 2px 0;
+    transform: translate(1px, 1px);
+    cursor: pointer;
+}
+
+#fixBookworks:active {
+    box-shadow: #0002 0px 0px 0;
+    transform: translate(3px, 3px);
+}
+
+#closeDevModal {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 3px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: calc(100% - 24px);
 }
